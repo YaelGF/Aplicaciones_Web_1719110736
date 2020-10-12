@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="Css\Tabla.css">
+        <title>Tablas</title>
+    </head>
+    <body>
+        <table id = "tabla">
+            <thead>
+                <!--Title -->
+                <tr>
+                    <th class="th1">
+                        Etiqueta
+                    </th>
+                    <th class= "th2">
+                        Descripcion
+                    </th>
+                    <th class="th1">
+                        Ejemplo de uso
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <!--Input Text-->
+                <tr>
+                    <td class="td1">
+                        &lt;input type= "text"&gt;
+                    </td>
+                    <td class="td2">
+                        Campo de texto de línea simple. Los saltos de línea son eliminados automáticamente del valor introducido.
+                    </td>
+                    <td class="td1">
+                        <p><label>Nombre </label><input type="text"></p>
+                        <p><label>Apellidos </label><input type="text"></p>
+                    </td>
+                </tr>
+                <!--Input Password-->
+                <tr>
+                    <td class="td1">
+                        &lt;input type= "password"&gt;
+                    </td>
+                    <td class="td2">
+                        Control de línea simple cuyo valor permanece oculto. Se puede usar el atributo maxlength para especificar la longitud máxima del valor que se puede introducir.
+                    </td>
+                    <td class="td1">
+                        <p><label>Contraseña </label><input type="password"></p>
+                    </td>
+                </tr>
+                <!--Input Submit-->
+                <tr>
+                    <td class="td1">
+                        &lt;input type= "submit"&gt;
+                    </td>
+                    <td class="td2">
+                        Define un botón para enviar datos de formulario a un administrador de formulario
+                    </td>
+                    <td class="td1">
+                        <p><input type="submit"></p>
+                    </td>
+                </tr>
+                <!--Input Reset-->
+                <tr>
+                    <td class="td1">
+                        &lt;input type= "reset"&gt;
+                    </td>
+                    <td class="td2">
+                        Botón que restaura los contenidos de un formulario a sus valores predeterminados.
+                    </td>
+                    <td class="td1">
+                        <form>
+                            <p><label>Ejemplo </label><input type="text"><input type="reset"></p>
+                        </form>
+                    </td>
+                </tr>
+                <!--Input Radio-->
+                <tr>
+                    <td class="td1">
+                        &lt;input type= "radio"&gt;
+                    </td>
+                    <td class="td2">
+                        Botón radio. Se debe usar el atributo value para definir el valor que se enviará por este elemento. Se usa el atributo checked para indicar si el elemento está seleccionado de forma predeterminada. Los botones radio que tengan el mismo valor para su atributo name están dentro del mismo "grupo de botones radio". Solo un botón radio dentro de un grupo puede ser seleccionado a la vez.
+                    </td>
+                    <td class="td1">
+                        <form>
+                            <input type="radio" name="gender" value ="Masculino">Masculino
+                            <input type="radio" name="gender" value ="Femenino">Femenino
+                        </form>
+                    </td>
+                </tr>
+                <!--Input Checkbox-->
+                <tr>
+                    <td class="td1">
+                        &lt;input type= "checkbox"&gt;
+                    </td>
+                    <td class="td2">
+                        Casilla de selección. Se debe usar el atributo value para definir el valor que se enviará por este elemento. Se usa el atributo checked para indicar si el elemento está seleccionado. También se puede usar el atributo indeterminate (el cual solo se puede establecer programaticamente) para indicar que la casilla está en un estado indeterminado (en la mayoría de las plataformas, se dibuja una línea horizontal a través de la casilla).
+                    </td>
+                    <td class="td1">
+                        <form>
+                            <input type="checkbox" value= "Matematicas">Matematicas
+                            <input type="checkbox" value= "Ingles">Ingles
+                            <input type="checkbox" value= "Historia">Historia
+                        </form>
+                    </td>
+                </tr>
+                <!--Input Buttton-->
+                <tr>
+                    <td class="td1">
+                        &lt;input type= "button"&gt;
+                    </td>
+                    <td class="td2">
+                        Botón sin un comportamiento específico.
+                    </td>
+                    <td class="td1">
+                        <form>
+                            <input type="button" value= "Button" onclick="alert('Hello! I am an alert box!!')">
+                        </form>
+                    </td>
+                </tr>
+                <!--Input Color-->
+                <tr>
+                    <td class="td1">
+                        &lt;input type= "color"&gt;
+                    </td>
+                    <td class="td2">
+                        Control para espicificar un color. Una interfaz de selección de color no requiere más funcionalidad que la de aceptar colores simples como texto 
+                    </td>
+                    <td class="td1">
+                        <form>
+                            <input type="color" id="send" oninput="result.value  = send.value">
+                            <input type="text" id=result>
+                        </form>
+                    </td>
+                </tr>
+                <!--Input Date-->
+                <tr>
+                    <td class="td1">
+                        &lt;input type= "date"&gt;
+                    </td>
+                    <td class="td2">
+                        Control para introducir una fecha (año, mes y día, sin tiempo).
+                    </td>
+                    <td class="td1">
+                        <form>
+                            <input type="date">
+                        </form>
+                    </td>
+                </tr>
+                <!--Input Datetime-Local-->
+                <tr>
+                    <td class="td1">
+                        &lt;input type= "datetime-local"&gt;
+                    </td>
+                    <td class="td2">
+                        Control para introducir fecha y hora, sin zona horaria específica.
+                    </td>
+                    <td class="td1">
+                        <form>
+                            <input type="datetime-local">
+                        </form>
+                    </td>
+                </tr>
+                <!--Input Email-->
+                <tr>
+                    <td class="td1">
+                        &lt;input type= "email"&gt;
+                    </td>
+                    <td class="td2">
+                        Campo para introducir una dirección de correo electrónico. El valor introducido se valida para que contenga una cadena vacía o una dirección de correo válida antes de enviarse.
+                    </td>
+                    <td class="td1">
+                        <form>
+                            <input type="email">
+                        </form>
+                    </td>
+                </tr>
+                <!--Input file-->
+                <tr>
+                    <td class="td1">
+                        &lt;input type= "file"&gt;
+                    </td>
+                    <td class="td2">
+                        Control que permite al usuario seleccionar un archivo. Se puede usar el atributo accept para definir los tipos de archivo que el control podrá seleccionar.
+                    </td>
+                    <td class="td1">
+                        <form>
+                            <input type="file">
+                        </form>
+                    </td>
+                </tr>
+                <!--Input Month-->
+                <tr>
+                    <td class="td1">
+                        &lt;input type= "month"&gt;
+                    </td>
+                    <td class="td2">
+                        Control para introducir un mes y año, sin zona horaria específica.
+                    </td>
+                    <td class="td1">
+                        <form>
+                            <input type="month">
+                        </form>
+                    </td>
+                </tr>
+                <!--Input Number-->
+                <tr>
+                    <td class="td1">
+                        &lt;input type= "number"&gt;
+                    </td>
+                    <td class="td2">
+                        Control para introducir un número.
+                    </td>
+                    <td class="td1">
+                        <form>
+                            <input type="number">
+                        </form>
+                    </td>
+                </tr>
+                <!--Input Range-->
+                <tr>
+                    <td class="td1">
+                        &lt;input type= "range"&gt;
+                    </td>
+                    <td class="td2">
+                        Control para introducir un número cuyo valor exacto no es importante.
+                    </td>
+                    <td class="td1">
+                        <form>
+                            <input type="range" min="0" max="100" id ="send" oninput="result.value = send.value">
+                            <input type="text" id="result">
+                        </form>
+                    </td>
+                </tr>
+                <!--Input Search-->
+                <tr>
+                    <td class="td1">
+                        &lt;input type= "search"&gt;
+                    </td>
+                    <td class="td2">
+                        Cuadro de texto de línea simple para introducir textos de búsqueda. Los saltos de línea son eliminados automáticamente del valor introducido.
+                    </td>
+                    <td class="td1">
+                        <form>
+                            <input type="search" >
+                        </form>
+                    </td>
+                </tr>
+                <!--Input Time-->
+                <tr>
+                    <td class="td1">
+                        &lt;input type= "time"&gt;
+                    </td>
+                    <td class="td2">
+                        Control para introducir un valor de tiempo sin zona horaria específica.
+                    </td>
+                    <td class="td1">
+                        <form>
+                            <input type="time" >
+                        </form>
+                    </td>
+                </tr>
+                <!--Input URL-->
+                <tr>
+                    <td class="td1">
+                        &lt;input type= "url"&gt;
+                    </td>
+                    <td class="td2">
+                        Campo para editar una URL. El valor introducido se valida para que contenga una cadena vacía o una ruta URL absoluta antes de enviarse. Los saltos de línea y espacios en blanco al principio o al final del valor son eliminados automáticamente.
+                    </td>
+                    <td class="td1">
+                        <form>
+                            <input type="url" >
+                        </form>
+                    </td>
+                </tr>
+                <!--Input Week-->
+                <tr>
+                    <td class="td1">
+                        &lt;input type= "week"&gt;
+                    </td>
+                    <td class="td2">
+                        Control para introducir una fecha que consiste en número de semana del año y número de semana sin zona horaria específica.
+                    </td>
+                    <td class="td1">
+                        <form>
+                            <input type="week" >
+                        </form>
+                    </td>
+                </tr>
+                <!--Input tel-->
+                <tr>
+                    <td class="td1">
+                        &lt;input type= "tel"&gt;
+                    </td>
+                    <td class="td2">
+                        Control para introducir un número telefónico. Los saltos de línea son eliminados automáticamente del valor introducido, pero no hay otra sintaxis forzada.
+                    </td>
+                    <td class="td1">
+                        <form>
+                            <input type="tel" >
+                        </form>
+                    </td>
+                </tr>
+                <!--Input Select-->
+                <tr>
+                    <td class="td1">
+                        &lt;Select&gt;
+                    </td>
+                    <td class="td2">
+                        Representa un control que permite al usuario elegir entre unas opciones.
+                    </td>
+                    <td class="td1">
+                        <form>
+                            <select name="idioma">
+                                <option >
+                                    Español
+                                </option>
+                                <option >
+                                    Ingles
+                                </option>
+                                <option >
+                                    Frances
+                                </option>
+                            </select>
+                        </form>
+                    </td>
+                </tr>
+                <!--Input Textarea-->
+                <tr>
+                    <td class="td1">
+                        &lt;textarea&gt;
+                    </td>
+                    <td class="td2">
+                        Representa un control para la edición de mutilínea de texto sin formato
+                    </td>
+                    <td class="td1">
+                        <form>
+                            <textarea cols="30" rows="10"></textarea>
+                        </form>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>
