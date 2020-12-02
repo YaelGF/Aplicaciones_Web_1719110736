@@ -7,7 +7,7 @@ function getData(){
         ingresar();
     }
     else{
-        alert("Error Verifique la cantidad (Recuerda debe de ser un numero entre 1 y 10)");
+        alert("Error Verifique la cantidad (Recuerda debe de ser un numero entre 1 -10)");
     }
 }
 function obtener_precio(){
@@ -51,9 +51,10 @@ function ingresar() {
     valor = obtener_precio();
 
     //Calculo
-
+    
     p_precio = cantidad * valor
-    precio = precio + (cantidad * valor)
+    precio = precio + p_precio
+    
 
     //Formato del Texto
 
@@ -78,7 +79,10 @@ function ingresar() {
     };
 }
 //Materialize
-
 $(document).ready(function(){
     $('select').formSelect();
 });
+function enviarPHP() {
+  var precio = parseInt(document.getElementById("valor-id").value);
+  var text = document.getElementById("textarea-id").value; 
+}
